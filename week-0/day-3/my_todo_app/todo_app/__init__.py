@@ -16,7 +16,7 @@ def create_app(test_config=None):
     try:
         os.makedirs(app.instance_path)
     except OSError:
-        pass
+        pass;
 
     def todo_view(todos):
         the_view = 'List of my todos:' + '<br/>'
