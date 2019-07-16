@@ -27,35 +27,35 @@ mkdir todo_app
 
 cd todo_app
 
-touch __init__.py # __init__.py is just like main function in c/c++ program
+#touch __init__.py # __init__.py is just like main function in c/c++ program
 
 # adding file content
-echo "adding minimal code to run flask app"
-cat > __init__.py << SERVER_SCRIPT
-import os
+#echo "adding minimal code to run flask app"
+#cat > __init__.py << SERVER_SCRIPT
+#import os
 
-from flask import Flask
+#from flask import Flask
 
 
-def create_app(test_config=None):
+#def create_app(test_config=None):
     # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
+ #   app = Flask(__name__, instance_relative_config=True)
 
     # ensure the instance folder exists
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
+  #  try:
+   #     os.makedirs(app.instance_path)
+    #except OSError:
+     #   pass
 
     # a simple page that list my todos
-    @app.route('/shivang')
-    def shivang():
-        return ('Wake Up' + '<br/>' +
-            'Drink Coffee' + '<br/>' +
-            'Read Non-fiction Novel' + '<br/>'
-        )
+    #@app.route('/shivang')
+    #def shivang():
+     #   return ('Wake Up' + '<br/>' +
+      #      'Drink Coffee' + '<br/>' +
+       #     'Read Non-fiction Novel' + '<br/>'
+        #)
 
-    return app
+    #return app
 
 SERVER_SCRIPT
 
